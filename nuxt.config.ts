@@ -9,6 +9,9 @@ export default defineNuxtConfig({
 		description: 'Aterbonus personal site',
 		defaultLocale: 'en' // not needed if you have @nuxtjs/i18n installed
 	},
+	ogImage: {
+		enabled: false
+	},
 	unocss: {
 		preflight: true
 	}
