@@ -5,7 +5,7 @@
 		"build": "nuxt build",
 		"dev": "nuxt dev",
 		"generate": "nuxt generate",
-		"preview": "nuxt preview",
+		"preview": "wrangler pages dev dist",
 		"postinstall": "nuxt prepare",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix"
@@ -21,6 +21,7 @@
 		"@vueuse/nuxt": "^10.11.0",
 		"eslint": "^9.5.0",
 		"nuxt": "^3.12.2",
-		"typescript": "^5.5.2"
+		"typescript": "^5.5.2",
+		"wrangler": "^3.61.0"
 	}
 }
