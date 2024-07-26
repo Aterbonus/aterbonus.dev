@@ -1,5 +1,13 @@
+<script lang="ts" setup>
+import { ConfigProvider } from 'radix-vue'
+
+const getId = () => useId()
+</script>
+
 <template>
-	<NuxtLayout>
-		<NuxtPage />
-	</NuxtLayout>
+	<ConfigProvider :use-id="getId">
+		<NuxtLayout>
+			<NuxtPage />
+		</NuxtLayout>
+	</ConfigProvider>
 </template>
