@@ -29,8 +29,7 @@ export default defineConfig({
 		}),
 		presetAnimations(),
 		presetShadcn({
-			color: 'violet',
-			darkSelector: '.dark'
+			color: 'violet'
 		})
 	],
 	transformers: [transformerVariantGroup()],
