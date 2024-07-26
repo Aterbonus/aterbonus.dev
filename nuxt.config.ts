@@ -2,17 +2,28 @@ export default defineNuxtConfig({
 	future: {
 		compatibilityVersion: 4
 	},
-	modules: ['@unocss/nuxt', '@vueuse/nuxt', '@nuxthub/core', '@nuxtjs/seo'],
+	modules: [
+		'@unocss/nuxt',
+		'@vueuse/nuxt',
+		'@nuxthub/core',
+		'@nuxtjs/seo',
+		'shadcn-nuxt'
+	],
 	site: {
 		url: 'https://aterbonus.dev',
 		name: 'Aterbonus\' Home',
-		description: 'Aterbonus personal site',
-		defaultLocale: 'en' // not needed if you have @nuxtjs/i18n installed
+		description: 'Gustavo Alfredo Marín Sáez, un desarrollador más.',
+		defaultLocale: 'es'
 	},
 	ogImage: {
 		enabled: false
 	},
 	unocss: {
 		preflight: true
-	}
+	},
+	shadcn: {
+		prefix: '',
+		componentDir: './app/components/ui'
+	},
+	compatibilityDate: '2024-07-26'
 })

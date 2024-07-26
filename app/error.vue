@@ -4,6 +4,8 @@ import type { NuxtError } from '#app'
 defineProps({
 	error: Object as () => NuxtError
 })
+
+const handleError = () => clearError({ redirect: '/' })
 </script>
 
 <template>
@@ -22,9 +24,9 @@ defineProps({
 					Ocurrió un error inesperado 😢
 				</h1>
 			</template>
-			<NuxtLink to="/" class="border-1px border-black rounded p-2">
+			<Button @click="handleError">
 				Volver al inicio
-			</NuxtLink>
+			</Button>
 		</div>
 	</div>
 </template>
