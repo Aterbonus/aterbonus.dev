@@ -8,6 +8,7 @@ defineProps({
 
 const handleError = () => clearError({ redirect: '/' })
 const getId = () => useId()
+useDark()
 </script>
 
 <template>

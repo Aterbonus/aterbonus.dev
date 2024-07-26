@@ -2,6 +2,7 @@
 import { ConfigProvider } from 'radix-vue'
 
 const getId = () => useId()
+useDark()
 </script>
 
 <template>
