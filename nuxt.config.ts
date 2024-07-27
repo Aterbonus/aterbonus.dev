@@ -37,7 +37,8 @@ export default defineNuxtConfig({
 		}
 	},
 	runtimeConfig: {
-		adminPassword: ''
+		adminPassword: '',
+		hello: ''
 	},
 	compatibilityDate: '2024-07-26'
 })
