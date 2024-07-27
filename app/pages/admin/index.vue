@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 const { clear } = useUserSession()
 
+definePageMeta({
+	auth: true
+})
+
 async function logout() {
 	await clear()
 	navigateTo('/')
