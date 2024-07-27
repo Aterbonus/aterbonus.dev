@@ -29,9 +29,11 @@ const login = form.handleSubmit(async (values) => {
 			title: 'Logueado correctamente'
 		})
 		await navigateTo('/admin')
-	}).catch(() => toast({
-		title: 'Password erronea'
-	}))
+	}).catch((e) => {
+		toast({
+			title: e.data?.message ?? 'Password erronea'
+		})
+	})
 })
 </script>
 

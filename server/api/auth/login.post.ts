@@ -17,7 +17,14 @@ export default eventHandler(async (event) => {
 		})
 	}
 
-	await verifyTurnstileToken(token, event)
+	const turnstile = await verifyTurnstileToken(token, event)
+
+	if (!turnstile.success) {
+		throw createError({
+			statusCode: 401,
+			message: `Captcha no aprobado (${turnstile['error-codes']})`
+		})
+	}
 
 	if (password !== adminPassword) {
 		throw createError({
