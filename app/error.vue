@@ -7,31 +7,39 @@ defineProps({
 })
 
 const handleError = () => clearError({ redirect: '/' })
-const getId = () => useId()
 useDark()
 </script>
 
 <template>
-	<ConfigProvider :use-id="getId">
-		<div class="grid h-screen place-items-center text-center supports-[(height:100svh)]:h-100svh">
-			<div>
+	<ConfigProvider :use-id="useId">
+		<main class="grid h-screen place-items-center px-4 text-center container supports-[(height:100svh)]:h-100svh">
+			<div class="max-w-full min-w-0">
 				<template v-if="error?.statusCode === 404">
 					<h1 class="text-20">
 						404
 					</h1>
-					<h2 class="mb-3 text-5">
+					<h2 class="mb-4 text-5">
 						Página no encontrada
 					</h2>
 				</template>
 				<template v-else>
-					<h1 class="mb-3 text-5">
+					<h1 class="mb-3 text-8">
 						Ocurrió un error inesperado 😢
 					</h1>
+					<DevOnly>
+						<h2 class="mb-3 text-5">
+							{{ error?.message }}
+						</h2>
+						<ScrollArea class="mb-4 h-240px border p-4">
+							<code v-if="error?.stack" class="break-words text-left" v-html="error.stack" />
+							<ScrollBar orientation="horizontal" />
+						</ScrollArea>
+					</DevOnly>
 				</template>
 				<Button @click="handleError">
 					Volver al inicio
 				</Button>
 			</div>
-		</div>
+		</main>
 	</ConfigProvider>
 </template>

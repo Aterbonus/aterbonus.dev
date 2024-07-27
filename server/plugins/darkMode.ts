@@ -1,6 +1,7 @@
 export default defineNitroPlugin((nitroApp) => {
 	nitroApp.hooks.hook('render:html', (html) => {
 		html.head.push(`
+<!-- from antfu.me -->
 <script>
 ;(function () {
 	const prefersDark =
