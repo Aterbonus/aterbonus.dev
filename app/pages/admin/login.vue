@@ -12,7 +12,7 @@ const { toast } = useToast()
 const form = useForm({
 	validationSchema: toTypedSchema(
 		v.object({
-			password: v.pipe(v.string(), v.nonEmpty('Es requerido'))
+			password: v.pipe(v.string('La contraseña es requerida'), v.nonEmpty('La contraseña es requerida'))
 		})
 	)
 })

@@ -4,7 +4,7 @@ export default eventHandler(async (event) => {
 	if (!adminPassword) {
 		throw createError({
 			statusCode: 500,
-			message: 'No se ha configurado el password'
+			message: 'No se ha configurado la contraseña'
 		})
 	}
 
@@ -13,7 +13,7 @@ export default eventHandler(async (event) => {
 	if (password !== adminPassword) {
 		throw createError({
 			statusCode: 401,
-			message: 'Password erronea'
+			message: 'Contraseña equivocada'
 		})
 	}
 
