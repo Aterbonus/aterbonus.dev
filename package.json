@@ -8,7 +8,8 @@
 		"preview": "wrangler pages dev dist",
 		"postinstall": "nuxt prepare",
 		"lint": "eslint .",
-		"lint:fix": "eslint . --fix"
+		"lint:fix": "eslint . --fix",
+		"shadcn-create": "pnpx shadcn-vue@latest add"
 	},
 	"devDependencies": {
 		"@antfu/eslint-config": "^2.23.2",
@@ -16,6 +17,8 @@
 		"@nuxtjs/seo": "2.0.0-rc.16",
 		"@unocss/eslint-plugin": "^0.61.5",
 		"@unocss/nuxt": "^0.61.5",
+		"@vee-validate/nuxt": "^4.13.2",
+		"@vee-validate/valibot": "^4.13.2",
 		"@vueuse/core": "^10.11.0",
 		"@vueuse/nuxt": "^10.11.0",
 		"class-variance-authority": "^0.7.0",
@@ -23,12 +26,19 @@
 		"eslint": "^9.8.0",
 		"lucide-vue-next": "^0.416.0",
 		"nuxt": "^3.12.4",
+		"nuxt-auth-utils": "^0.2.1",
 		"radix-vue": "^1.9.2",
 		"shadcn-nuxt": "^0.10.4",
 		"tailwind-merge": "^2.4.0",
 		"typescript": "^5.5.4",
 		"unocss-preset-animations": "^1.1.0",
 		"unocss-preset-shadcn": "^0.3.1",
+		"valibot": "^0.36.0",
 		"wrangler": "^3.67.1"
+	},
+	"dependencies": {
+		"@vee-validate/zod": "^4.13.2",
+		"vee-validate": "^4.13.2",
+		"zod": "^3.23.8"
 	}
 }

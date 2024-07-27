@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-throw createError({
-	statusCode: 500,
-	message: 'AUTOINFLICTED'
+definePageMeta({
+	auth: false
 })
 </script>
 

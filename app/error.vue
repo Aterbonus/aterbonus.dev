@@ -6,12 +6,13 @@ defineProps({
 	error: Object as () => NuxtError
 })
 
+const useIdFunction = () => useId()
 const handleError = () => clearError({ redirect: '/' })
 useDark()
 </script>
 
 <template>
-	<ConfigProvider :use-id="useId">
+	<ConfigProvider :use-id="useIdFunction">
 		<main class="grid h-screen place-items-center px-4 text-center container supports-[(height:100svh)]:h-100svh">
 			<div class="max-w-full min-w-0">
 				<template v-if="error?.statusCode === 404">

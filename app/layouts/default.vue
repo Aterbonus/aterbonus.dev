@@ -1,5 +1,7 @@
 <template>
 	<div class="font-sans">
-		<main><slot /></main>
+		<main class="container">
+			<slot />
+		</main>
 	</div>
 </template>

@@ -7,7 +7,10 @@ export default defineNuxtConfig({
 		'@vueuse/nuxt',
 		'@nuxthub/core',
 		'@nuxtjs/seo',
-		'shadcn-nuxt'
+		'shadcn-nuxt',
+		'nuxt-auth-utils',
+		'@vee-validate/nuxt'
+
 	],
 	site: {
 		url: 'https://aterbonus.dev',
@@ -24,6 +27,17 @@ export default defineNuxtConfig({
 	shadcn: {
 		prefix: '',
 		componentDir: './app/components/ui'
+	},
+	veeValidate: {
+		componentNames: {
+			Form: 'VeeForm',
+			Field: 'VeeField',
+			FieldArray: 'VeeFieldArray',
+			ErrorMessage: 'VeeErrorMessage'
+		}
+	},
+	runtimeConfig: {
+		adminPassword: ''
 	},
 	compatibilityDate: '2024-07-26'
 })

@@ -7,6 +7,16 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@vee-validate/zod':
+        specifier: ^4.13.2
+        version: 4.13.2(vue@3.4.34(typescript@5.5.4))
+      vee-validate:
+        specifier: ^4.13.2
+        version: 4.13.2(vue@3.4.34(typescript@5.5.4))
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^2.23.2
@@ -23,6 +33,12 @@ importers:
       '@unocss/nuxt':
         specifier: ^0.61.5
         version: 0.61.5(magicast@0.3.4)(postcss@8.4.40)(rollup@4.19.0)(vite@5.3.5(@types/node@20.14.12)(sass@1.77.8)(terser@5.31.3))(webpack@5.93.0(esbuild@0.17.19))
+      '@vee-validate/nuxt':
+        specifier: ^4.13.2
+        version: 4.13.2(magicast@0.3.4)(rollup@4.19.0)(vue@3.4.34(typescript@5.5.4))
+      '@vee-validate/valibot':
+        specifier: ^4.13.2
+        version: 4.13.2(vue@3.4.34(typescript@5.5.4))
       '@vueuse/core':
         specifier: ^10.11.0
         version: 10.11.0(vue@3.4.34(typescript@5.5.4))
@@ -44,6 +60,9 @@ importers:
       nuxt:
         specifier: ^3.12.4
         version: 3.12.4(@parcel/watcher@2.4.1)(@types/node@20.14.12)(encoding@0.1.13)(eslint@9.8.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.19.0)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.4)(vite@5.3.5(@types/node@20.14.12)(sass@1.77.8)(terser@5.31.3))
+      nuxt-auth-utils:
+        specifier: ^0.2.1
+        version: 0.2.1(magicast@0.3.4)(rollup@4.19.0)
       radix-vue:
         specifier: ^1.9.2
         version: 1.9.2(vue@3.4.34(typescript@5.5.4))
@@ -62,6 +81,9 @@ importers:
       unocss-preset-shadcn:
         specifier: ^0.3.1
         version: 0.3.1(unocss-preset-animations@1.1.0(@unocss/preset-wind@0.61.5)(unocss@0.61.5(@unocss/webpack@0.61.5(rollup@4.19.0)(webpack@5.93.0(esbuild@0.17.19)))(postcss@8.4.40)(rollup@4.19.0)(vite@5.3.5(@types/node@20.14.12)(sass@1.77.8)(terser@5.31.3))))(unocss@0.61.5(@unocss/webpack@0.61.5(rollup@4.19.0)(webpack@5.93.0(esbuild@0.17.19)))(postcss@8.4.40)(rollup@4.19.0)(vite@5.3.5(@types/node@20.14.12)(sass@1.77.8)(terser@5.31.3)))
+      valibot:
+        specifier: ^0.36.0
+        version: 0.36.0
       wrangler:
         specifier: ^3.67.1
         version: 3.67.1(@cloudflare/workers-types@4.20240725.0)
@@ -1755,6 +1777,15 @@ packages:
 
   '@uploadthing/mime-types@0.2.10':
     resolution: {integrity: sha512-kz3F0oEgAyts25NAGXlUBCWh3mXonbSOQJFGFMawHuIgbUbnzXbe4w5WI+0XdneCbjNmikfWrdWrs8m/7HATfQ==}
+
+  '@vee-validate/nuxt@4.13.2':
+    resolution: {integrity: sha512-rpYYO2isCrgHRdJnKRXGPn8aqhyZvCPUJgNubftPum1txbngkO/LNiFsZdFDO7auGprDAQf7axpszRfeKoCGVg==}
+
+  '@vee-validate/valibot@4.13.2':
+    resolution: {integrity: sha512-Vz/sAJc0i1Z1zsXbER15/7EUcD2mYHCaBrmmFs6oFBSDFoDXwJYjPMSklHqyOUVEt15wBVd9HU52f+4cD/5kxw==}
+
+  '@vee-validate/zod@4.13.2':
+    resolution: {integrity: sha512-y1aqelutD6btX2ayZk3w8udClAykptphlGLwu0vlCqY2r9mrJqMn1EKqtcwXAvEom+ceTcHJOwGr2FUA7i+ZEg==}
 
   '@vercel/nft@0.26.5':
     resolution: {integrity: sha512-NHxohEqad6Ra/r4lGknO52uc/GrWILXAMs1BB4401GTqww0fw1bAqzpG1XHuDO+dprg4GvsD9ZLLSsdo78p9hQ==}
@@ -3747,6 +3778,9 @@ packages:
     engines: {node: ^16.10.0 || >=18.0.0}
     hasBin: true
 
+  nuxt-auth-utils@0.2.1:
+    resolution: {integrity: sha512-iorn9Eq4QM4ftE+1JL1QTAjDWFh2KWmTpgTHwoaQrMbTQKeEZoR1tftaLrDQbFZMwWVlEi65LwMj5xPDlJsUzw==}
+
   nuxt-link-checker@3.1.0:
     resolution: {integrity: sha512-Au2ymyvdyK1vNFzE/LdgnjkhhTxjP7iaL9TL/Bsh7DwBbEjdo0+MrqYHULXs54MfCa1daafxMacvsLzOQqC1xQ==}
 
@@ -4714,6 +4748,10 @@ packages:
     resolution: {integrity: sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==}
     engines: {node: '>=14.16'}
 
+  type-fest@4.23.0:
+    resolution: {integrity: sha512-ZiBujro2ohr5+Z/hZWHESLz3g08BBdrdLMieYFULJO+tWc437sn8kQsWLJoZErY8alNhxre9K4p3GURAG11n+w==}
+    engines: {node: '>=16'}
+
   typescript@5.5.4:
     resolution: {integrity: sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==}
     engines: {node: '>=14.17'}
@@ -4880,8 +4918,19 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
+  valibot@0.33.3:
+    resolution: {integrity: sha512-/fuY1DlX8uiQ7aphlzrrI2DbG0YJk84JMgvz2qKpUIdXRNsS53varfo4voPjSrjUr5BSV2K0miSEJUOlA5fQFg==}
+
+  valibot@0.36.0:
+    resolution: {integrity: sha512-CjF1XN4sUce8sBK9TixrDqFM7RwNkuXdJu174/AwmQUB62QbCQADg5lLe8ldBalFgtj1uKj+pKwDJiNo4Mn+eQ==}
+
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
+
+  vee-validate@4.13.2:
+    resolution: {integrity: sha512-HlpR/6MJ92TW9f135umMZKUqdd/tFQTxLNSf2ImbU4Y/MlLVAUpF1l64VdjTOhbClAqPjCb5p/SqHDxLpUHXrw==}
+    peerDependencies:
+      vue: ^3.4.26
 
   vite-hot-client@0.2.3:
     resolution: {integrity: sha512-rOGAV7rUlUHX89fP2p2v0A2WWvV3QMX2UYq0fRqsWSvFvev4atHWqjwGoKaZT1VTKyLGk533ecu3eyd0o59CAg==}
@@ -7041,6 +7090,33 @@ snapshots:
       - rollup
 
   '@uploadthing/mime-types@0.2.10': {}
+
+  '@vee-validate/nuxt@4.13.2(magicast@0.3.4)(rollup@4.19.0)(vue@3.4.34(typescript@5.5.4))':
+    dependencies:
+      '@nuxt/kit': 3.12.4(magicast@0.3.4)(rollup@4.19.0)
+      local-pkg: 0.5.0
+      vee-validate: 4.13.2(vue@3.4.34(typescript@5.5.4))
+    transitivePeerDependencies:
+      - magicast
+      - rollup
+      - supports-color
+      - vue
+
+  '@vee-validate/valibot@4.13.2(vue@3.4.34(typescript@5.5.4))':
+    dependencies:
+      type-fest: 4.23.0
+      valibot: 0.33.3
+      vee-validate: 4.13.2(vue@3.4.34(typescript@5.5.4))
+    transitivePeerDependencies:
+      - vue
+
+  '@vee-validate/zod@4.13.2(vue@3.4.34(typescript@5.5.4))':
+    dependencies:
+      type-fest: 4.23.0
+      vee-validate: 4.13.2(vue@3.4.34(typescript@5.5.4))
+      zod: 3.23.8
+    transitivePeerDependencies:
+      - vue
 
   '@vercel/nft@0.26.5(encoding@0.1.13)':
     dependencies:
@@ -9370,6 +9446,20 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
+  nuxt-auth-utils@0.2.1(magicast@0.3.4)(rollup@4.19.0):
+    dependencies:
+      '@nuxt/kit': 3.12.4(magicast@0.3.4)(rollup@4.19.0)
+      defu: 6.1.4
+      hookable: 5.5.3
+      ofetch: 1.3.4
+      ohash: 1.1.3
+      pathe: 1.1.2
+      uncrypto: 0.1.3
+    transitivePeerDependencies:
+      - magicast
+      - rollup
+      - supports-color
+
   nuxt-link-checker@3.1.0(magicast@0.3.4)(rollup@4.19.0)(vite@5.3.5(@types/node@20.14.12)(sass@1.77.8)(terser@5.31.3))(vue@3.4.34(typescript@5.5.4)):
     dependencies:
       '@nuxt/devtools-kit': 1.3.9(magicast@0.3.4)(rollup@4.19.0)(vite@5.3.5(@types/node@20.14.12)(sass@1.77.8)(terser@5.31.3))
@@ -10568,6 +10658,8 @@ snapshots:
 
   type-fest@3.13.1: {}
 
+  type-fest@4.23.0: {}
+
   typescript@5.5.4: {}
 
   ufo@1.5.4: {}
@@ -10790,10 +10882,20 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
+  valibot@0.33.3: {}
+
+  valibot@0.36.0: {}
+
   validate-npm-package-license@3.0.4:
     dependencies:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
+
+  vee-validate@4.13.2(vue@3.4.34(typescript@5.5.4)):
+    dependencies:
+      '@vue/devtools-api': 6.6.3
+      type-fest: 4.23.0
+      vue: 3.4.34(typescript@5.5.4)
 
   vite-hot-client@0.2.3(vite@5.3.5(@types/node@20.14.12)(sass@1.77.8)(terser@5.31.3)):
     dependencies:
