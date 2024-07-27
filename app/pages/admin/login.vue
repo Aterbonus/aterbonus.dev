@@ -58,7 +58,7 @@ const login = form.handleSubmit(async (values) => {
 				</form>
 			</CardContent>
 			<CardFooter>
-				<Button form="login" class="ml-auto" type="submit" :disabled="!form.isSubmitting">
+				<Button form="login" class="ml-auto" type="submit" :disabled="!form.isSubmitting || token.length === 0">
 					Login
 				</Button>
 			</CardFooter>
