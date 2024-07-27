@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { toTypedSchema } from '@vee-validate/valibot'
 import * as v from 'valibot'
-import { useToast } from '~/components/ui/toast'
 
 definePageMeta({
 	layout: 'nothing',
@@ -33,7 +32,9 @@ const login = form.handleSubmit(async (values) => {
 				<form id="login" @submit="login">
 					<FormField v-slot="{ componentField }" name="password">
 						<FormItem v-auto-animate class="mb-3">
-							<FormLabel>Password</FormLabel>
+							<FormLabel class="transition-colors">
+								Password
+							</FormLabel>
 							<FormControl>
 								<Input type="password" placeholder="******" v-bind="componentField" />
 							</FormControl>
