@@ -18,6 +18,9 @@ export default defineNuxtConfig({
 		description: 'Gustavo Alfredo Marín Sáez, un desarrollador más.',
 		defaultLocale: 'es'
 	},
+	routeRules: {
+		'/admin/**': { robots: false }
+	},
 	ogImage: {
 		enabled: false
 	},
