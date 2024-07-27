@@ -8,7 +8,16 @@ export default eventHandler(async (event) => {
 		})
 	}
 
-	const { password } = (await readBody(event)) || {}
+	const { password, token } = (await readBody(event)) || {}
+
+	if (!token) {
+		throw createError({
+			statusCode: 422,
+			statusMessage: 'Token no enviado'
+		})
+	}
+
+	await verifyTurnstileToken(token, event)
 
 	if (password !== adminPassword) {
 		throw createError({

@@ -13,8 +13,10 @@
 	},
 	"devDependencies": {
 		"@antfu/eslint-config": "^2.23.2",
+		"@nuxt/scripts": "^0.6.4",
 		"@nuxthub/core": "^0.7.1",
 		"@nuxtjs/seo": "2.0.0-rc.16",
+		"@nuxtjs/turnstile": "^0.9.3",
 		"@unocss/eslint-plugin": "^0.61.5",
 		"@unocss/nuxt": "^0.61.5",
 		"@vee-validate/nuxt": "^4.13.2",

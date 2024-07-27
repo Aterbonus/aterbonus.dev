@@ -7,8 +7,10 @@ definePageMeta({
 	layout: 'nothing',
 	auth: 'guest'
 })
+
 const { fetch: refreshSession } = useUserSession()
 const { toast } = useToast()
+const token = ref('')
 const form = useForm({
 	validationSchema: toTypedSchema(
 		v.object({
@@ -20,7 +22,7 @@ const form = useForm({
 const login = form.handleSubmit(async (values) => {
 	await $fetch('/api/auth/login', {
 		method: 'POST',
-		body: { password: values.password }
+		body: { password: values.password, token: token.value }
 	}).then(async () => {
 		await refreshSession()
 		toast({
@@ -42,7 +44,7 @@ const login = form.handleSubmit(async (values) => {
 			<CardContent>
 				<form id="login" @submit="login">
 					<FormField v-slot="{ componentField }" name="password">
-						<FormItem v-auto-animate>
+						<FormItem v-auto-animate class="mb-3">
 							<FormLabel>Password</FormLabel>
 							<FormControl>
 								<Input type="password" placeholder="******" v-bind="componentField" />
@@ -50,6 +52,7 @@ const login = form.handleSubmit(async (values) => {
 							<FormMessage />
 						</FormItem>
 					</FormField>
+					<NuxtTurnstile v-model="token" />
 				</form>
 			</CardContent>
 			<CardFooter>

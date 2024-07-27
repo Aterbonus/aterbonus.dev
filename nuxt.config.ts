@@ -9,8 +9,8 @@ export default defineNuxtConfig({
 		'@nuxtjs/seo',
 		'shadcn-nuxt',
 		'nuxt-auth-utils',
-		'@vee-validate/nuxt'
-
+		'@vee-validate/nuxt',
+		'@nuxtjs/turnstile'
 	],
 	site: {
 		url: 'https://aterbonus.dev',
@@ -40,7 +40,11 @@ export default defineNuxtConfig({
 		}
 	},
 	runtimeConfig: {
+		public: {
+			turnstileSiteKey: ''
+		},
 		adminPassword: '',
+		turnstileSecretKey: '',
 		hello: ''
 	},
 	compatibilityDate: '2024-07-26'
