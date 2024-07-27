@@ -10,7 +10,8 @@ export default defineNuxtConfig({
 		'shadcn-nuxt',
 		'nuxt-auth-utils',
 		'@vee-validate/nuxt',
-		'@nuxtjs/turnstile'
+		'@nuxtjs/turnstile',
+		'@pinia/nuxt'
 	],
 	site: {
 		url: 'https://aterbonus.dev',

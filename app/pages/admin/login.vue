@@ -8,8 +8,7 @@ definePageMeta({
 	auth: 'guest'
 })
 
-const { fetch: refreshSession } = useUserSession()
-const { toast } = useToast()
+const { login: loginUser } = useAuthStore()
 const token = ref('')
 const form = useForm({
 	validationSchema: toTypedSchema(
@@ -20,20 +19,7 @@ const form = useForm({
 })
 
 const login = form.handleSubmit(async (values) => {
-	await $fetch('/api/auth/login', {
-		method: 'POST',
-		body: { password: values.password, token: token.value }
-	}).then(async () => {
-		await refreshSession()
-		toast({
-			title: 'Logueado correctamente'
-		})
-		await navigateTo('/admin')
-	}).catch((e) => {
-		toast({
-			title: e.data?.message ?? 'Password erronea'
-		})
-	})
+	await loginUser(values.password, token.value)
 })
 </script>
 

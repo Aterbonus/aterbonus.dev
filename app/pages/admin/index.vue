@@ -1,13 +1,12 @@
 <script lang="ts" setup>
-const { clear } = useUserSession()
+const { logout: logoutUser } = useAuthStore()
 
 definePageMeta({
 	auth: true
 })
 
 async function logout() {
-	await clear()
-	navigateTo('/')
+	logoutUser()
 }
 </script>
 
