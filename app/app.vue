@@ -1,15 +1,18 @@
 <script lang="ts" setup>
 import { ConfigProvider } from 'radix-vue'
 
-useDark()
 const useIdFunction = () => useId()
 </script>
 
 <template>
 	<ConfigProvider :use-id="useIdFunction">
-		<NuxtLayout>
-			<NuxtPage />
-		</NuxtLayout>
-		<Toaster />
+		<NuxtRouteAnnouncer />
+		<NuxtLoadingIndicator />
+		<div class="font-sans">
+			<NuxtLayout>
+				<NuxtPage />
+			</NuxtLayout>
+			<Toaster />
+		</div>
 	</ConfigProvider>
 </template>

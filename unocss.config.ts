@@ -16,16 +16,16 @@ export default defineConfig({
 		presetWebFonts({
 			fonts: {
 				sans: {
-					name: 'Lato',
+					name: 'Inter',
+					weights: [400, 700]
+				},
+				serif: {
+					name: 'Zilla Slab',
 					weights: [400, 700]
 				},
 				mono: 'Fira Code'
 			},
-			processors: createLocalFontProcessor({
-				cacheDir: 'node_modules/.cache/unocss/fonts',
-				fontAssetsDir: 'public/assets/fonts',
-				fontServeBaseUrl: '/assets/fonts'
-			})
+			processors: createLocalFontProcessor()
 		}),
 		presetAnimations(),
 		presetShadcn({
@@ -35,12 +35,8 @@ export default defineConfig({
 	transformers: [transformerVariantGroup()],
 	theme: {
 		container: {
-			center: true
-		},
-		breakpoints: {
-			sm: '640px',
-			md: '768px',
-			lg: '1140px'
+			center: true,
+			padding: '10px'
 		}
 	},
 	content: {

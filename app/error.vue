@@ -13,6 +13,8 @@ useDark()
 
 <template>
 	<ConfigProvider :use-id="useIdFunction">
+		<NuxtRouteAnnouncer />
+		<NuxtLoadingIndicator />
 		<main class="grid h-screen place-items-center px-4 text-center container supports-[(height:100svh)]:h-100svh">
 			<div class="max-w-full min-w-0">
 				<template v-if="error?.statusCode === 404">

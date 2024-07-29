@@ -23,7 +23,7 @@ const login = form.handleSubmit(async (values) => {
 </script>
 
 <template>
-	<div class="pt-32">
+	<div class="px-16 pt-32">
 		<Card class="mx-auto max-w-360px">
 			<CardHeader>
 				<CardTitle>Login</CardTitle>

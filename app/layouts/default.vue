@@ -1,5 +1,6 @@
 <template>
-	<div class="font-sans">
+	<div>
+		<Header class="sticky top-0" />
 		<main class="container">
 			<slot />
 		</main>

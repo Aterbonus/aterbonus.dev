@@ -2,7 +2,8 @@
 const { logout: logoutUser } = useAuthStore()
 
 definePageMeta({
-	auth: true
+	auth: true,
+	layout: 'admin'
 })
 
 async function logout() {

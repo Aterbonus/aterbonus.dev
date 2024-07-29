@@ -26,7 +26,8 @@ export default defineNuxtConfig({
 		enabled: false
 	},
 	unocss: {
-		preflight: true
+		preflight: true,
+		disableNuxtInlineStyle: false
 	},
 	shadcn: {
 		prefix: '',
