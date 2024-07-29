@@ -25,6 +25,14 @@ export default defineNuxtConfig({
 	ogImage: {
 		enabled: false
 	},
+	schemaOrg: {
+		identity: {
+			type: 'Person',
+			name: 'Gustavo Alfredo Marín Sáez',
+			url: 'https://aterbonus.dev',
+			sameAs: ['https://github.com/aterbonus', 'https://www.linkedin.com/in/gustavo-marin-saez/']
+		}
+	},
 	unocss: {
 		preflight: true,
 		disableNuxtInlineStyle: false

@@ -11,6 +11,11 @@
 		"lint:fix": "eslint . --fix",
 		"shadcn-create": "pnpx shadcn-vue@latest add"
 	},
+	"dependencies": {
+		"@vee-validate/zod": "^4.13.2",
+		"vee-validate": "^4.13.2",
+		"zod": "^3.23.8"
+	},
 	"devDependencies": {
 		"@antfu/eslint-config": "^2.24.0",
 		"@formkit/auto-animate": "^0.8.2",
@@ -41,10 +46,5 @@
 		"unocss-preset-shadcn": "^0.3.1",
 		"valibot": "^0.36.0",
 		"wrangler": "^3.67.1"
-	},
-	"dependencies": {
-		"@vee-validate/zod": "^4.13.2",
-		"vee-validate": "^4.13.2",
-		"zod": "^3.23.8"
 	}
 }

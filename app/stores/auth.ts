@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 import { useToast } from '~/components/ui/toast'
 
 export const useAuthStore = defineStore('auth', () => {
+	const route = useRoute()
 	const { fetch: refreshSession, clear, user, loggedIn } = useUserSession()
 	const { toast } = useToast()
 
@@ -29,7 +30,10 @@ export const useAuthStore = defineStore('auth', () => {
 		toast({
 			title: 'Sesión finalizada'
 		})
-		return navigateTo('/')
+
+		if (route.path.startsWith('/admin')) {
+			return navigateTo('/')
+		}
 	}
 
 	return {
