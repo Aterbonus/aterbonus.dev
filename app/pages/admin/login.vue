@@ -3,7 +3,6 @@ import { toTypedSchema } from '@vee-validate/valibot'
 import * as v from 'valibot'
 
 definePageMeta({
-	layout: 'nothing',
 	auth: 'guest'
 })
 
@@ -20,6 +19,8 @@ const form = useForm({
 const login = form.handleSubmit(async (values) => {
 	await loginUser(values.password, token.value)
 })
+
+const isDark = useDark()
 </script>
 
 <template>
@@ -41,7 +42,7 @@ const login = form.handleSubmit(async (values) => {
 							<FormMessage />
 						</FormItem>
 					</FormField>
-					<NuxtTurnstile v-model="token" />
+					<NuxtTurnstile v-model="token" :options="{ theme: isDark ? 'dark' : 'light' }" />
 				</form>
 			</CardContent>
 			<CardFooter>
