@@ -13,6 +13,14 @@ export default defineNuxtConfig({
 		'@nuxtjs/turnstile',
 		'@pinia/nuxt'
 	],
+	hub: {
+		database: true
+	},
+	nitro: {
+		experimental: {
+			tasks: true
+		}
+	},
 	site: {
 		url: 'https://aterbonus.dev',
 		name: 'Aterbonus\' Home',
@@ -55,7 +63,8 @@ export default defineNuxtConfig({
 		},
 		adminPassword: '',
 		turnstileSecretKey: '',
-		hello: ''
+		hello: '',
+		commentsPassword: ''
 	},
 	compatibilityDate: '2024-07-26'
 })

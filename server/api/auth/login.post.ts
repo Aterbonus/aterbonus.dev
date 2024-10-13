@@ -8,23 +8,9 @@ export default eventHandler(async (event) => {
 		})
 	}
 
-	const { password, token } = (await readBody(event)) || {}
+	await requireCaptcha(event)
 
-	if (!token) {
-		throw createError({
-			statusCode: 422,
-			statusMessage: 'Token no enviado'
-		})
-	}
-
-	const turnstile = await verifyTurnstileToken(token, event)
-
-	if (!turnstile.success) {
-		throw createError({
-			statusCode: 401,
-			message: `Captcha no aprobado (${turnstile['error-codes']})`
-		})
-	}
+	const { password } = (await readBody(event)) || {}
 
 	if (password !== adminPassword) {
 		throw createError({

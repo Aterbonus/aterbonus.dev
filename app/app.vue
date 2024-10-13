@@ -1,6 +1,11 @@
 <script lang="ts" setup>
 import { ConfigProvider } from 'radix-vue'
 
+useHead({
+	bodyAttrs: {
+		class: 'overflow-y-scroll'
+	}
+})
 const useIdFunction = () => useId()
 </script>
 

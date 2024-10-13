@@ -6,6 +6,12 @@ defineProps({
 	error: Object as () => NuxtError
 })
 
+useHead({
+	bodyAttrs: {
+		class: 'overflow-y-scroll'
+	}
+})
+
 const useIdFunction = () => useId()
 const handleError = () => clearError({ redirect: '/' })
 useDark()

@@ -16,8 +16,15 @@ const form = useForm({
 	)
 })
 
+const turnstile = useTemplateRef('turnstile')
+
 const login = form.handleSubmit(async (values) => {
-	await loginUser(values.password, token.value)
+	try {
+		await loginUser(values.password, token.value)
+	}
+	finally {
+		turnstile.value?.reset()
+	}
 })
 
 const isDark = useDark()
@@ -42,11 +49,11 @@ const isDark = useDark()
 							<FormMessage />
 						</FormItem>
 					</FormField>
-					<NuxtTurnstile v-model="token" :options="{ theme: isDark ? 'dark' : 'light' }" />
+					<NuxtTurnstile ref="turnstile" v-model="token" :options="{ theme: isDark ? 'dark' : 'light' }" />
 				</form>
 			</CardContent>
 			<CardFooter>
-				<Button form="login" class="ml-auto" type="submit" :disabled="!form.isSubmitting || token.length === 0">
+				<Button form="login" class="ml-auto" type="submit" :disabled="form.isSubmitting.value || token.length === 0">
 					Login
 				</Button>
 			</CardFooter>

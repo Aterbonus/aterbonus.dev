@@ -4,11 +4,11 @@ definePageMeta({
 })
 
 const subtitles = [
+	'Cargando...',
 	'Un desarrollador más',
 	'Desarrollando...',
 	'Aún viendo que poner aquí',
-	'Cargando frases...',
-	'Cargando...'
+	'Cargando frases...'
 ]
 const subtitle = ref(subtitles[0])
 
