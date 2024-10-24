@@ -25,7 +25,7 @@ onMounted(() => {
 					Gustavo Alfredo <br class="lg:block sm:hidden">Marín Sáez
 				</h1>
 				<h2 class="text-6 md:(text-8)">
-					Hola Alonso
+					{{ subtitle }}
 				</h2>
 			</div>
 			<div class="grid place-items-center">
