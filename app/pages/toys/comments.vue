@@ -32,11 +32,11 @@ const fetchComments = form.handleSubmit(async (values) => {
 	await execute()
 })
 
-function formatTime(date: Date | number) {
+function formatTime(date: string) {
 	return new Intl.DateTimeFormat('default', {
 		hour: 'numeric',
 		minute: 'numeric'
-	}).format(date)
+	}).format(new Date(date))
 }
 </script>
 
