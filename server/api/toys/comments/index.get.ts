@@ -29,7 +29,7 @@ export default defineEventHandler(async (event) => {
 		.offset(offset)
 
 	return comments.map((comment) => {
-		const decodedComment = JSON.parse(comment.content) as Comment
+		const decodedComment = comment.content as Comment
 
 		return {
 			id: comment.id,

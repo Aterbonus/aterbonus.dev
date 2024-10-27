@@ -8,11 +8,11 @@ export default defineEventHandler(async (event) => {
 	const drizzle = useDrizzle()
 
 	return drizzle.insert(tables.misc).values([{
-		content: JSON.stringify({
+		content: {
 			name: data.name,
 			email: data.email,
 			comment: data.comment
-		}),
+		},
 		type: 'comment'
 	}]).returning()
 })
