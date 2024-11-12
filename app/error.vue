@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ConfigProvider } from 'radix-vue'
 import type { NuxtError } from '#app'
+import { ConfigProvider } from 'radix-vue'
 
 defineProps({
 	error: Object as () => NuxtError

@@ -9,3 +9,16 @@ Content-Type: application/json
 	"comment": "Probando 123",
 	"password": "abc123"
 }
+
+###
+
+POST {{baseURL}}/api/toys/forms
+Content-Type: application/json
+
+{
+	"name": "Gustavo Marín",
+	"email": "other@example.com",
+	"subject": "Este es un asunto",
+	"content": "Este es un contenido",
+	"password": "abc123forms"
+}

@@ -64,7 +64,8 @@ export default defineNuxtConfig({
 		adminPassword: '',
 		turnstileSecretKey: '',
 		hello: '',
-		commentsPassword: ''
+		commentsPassword: '',
+		formsPassword: ''
 	},
 	compatibilityDate: '2024-07-26'
 })

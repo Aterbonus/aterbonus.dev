@@ -1,5 +1,5 @@
-import { defineConfig, presetIcons, presetUno, presetWebFonts, transformerVariantGroup } from 'unocss'
 import { createLocalFontProcessor } from '@unocss/preset-web-fonts/local'
+import { defineConfig, presetIcons, presetUno, presetWebFonts, transformerVariantGroup } from 'unocss'
 import presetAnimations from 'unocss-preset-animations'
 import { presetShadcn } from 'unocss-preset-shadcn'
 
