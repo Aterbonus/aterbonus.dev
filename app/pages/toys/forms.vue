@@ -86,6 +86,7 @@ function formatTime(date: string) {
 							<span class="text-sm font-semibold">{{ currentForm.name }}</span>
 							<span class="ml-2 text-xs opacity-75">{{ formatTime(currentForm.createdAt) }}</span>
 						</div>
+						<p><strong>Asunto: {{ currentForm.subject }}</strong></p>
 						<p>{{ currentForm.content }}</p>
 					</div>
 				</div>
