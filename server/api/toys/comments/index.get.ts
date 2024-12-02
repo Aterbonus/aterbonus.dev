@@ -1,6 +1,5 @@
 import type { Comment } from '~~/server/utils/schemas/toys/comments'
 import { createHash } from 'node:crypto'
-import { useDrizzle } from '#build/types/nitro-imports'
 import * as v from 'valibot'
 
 export default defineEventHandler(async (event) => {

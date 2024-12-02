@@ -1,5 +1,4 @@
 import type { Meme } from '~~/server/utils/schemas/toys/memes'
-import { useDrizzle } from '#build/types/nitro-imports'
 import * as v from 'valibot'
 
 export default defineEventHandler(async (event) => {

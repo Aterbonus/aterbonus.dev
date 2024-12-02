@@ -1,4 +1,3 @@
-import { useDrizzle } from '#build/types/nitro-imports'
 import { createValidateCreateComment } from '~~/server/utils/schemas/toys/comments'
 
 export default defineEventHandler(async (event) => {
