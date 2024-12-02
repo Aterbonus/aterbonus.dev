@@ -1,3 +1,4 @@
+import { useDrizzle } from '#build/types/nitro-imports'
 import * as v from 'valibot'
 
 export default eventHandler(async (event) => {

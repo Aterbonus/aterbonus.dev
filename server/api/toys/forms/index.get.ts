@@ -1,5 +1,5 @@
 import type { Form } from '~~/server/utils/schemas/toys/forms'
-import { createHash } from 'node:crypto'
+import { useDrizzle } from '#build/types/nitro-imports'
 import * as v from 'valibot'
 
 export default defineEventHandler(async (event) => {
