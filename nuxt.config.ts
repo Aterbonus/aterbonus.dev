@@ -69,6 +69,7 @@ export default defineNuxtConfig({
 		adminPassword: '',
 		turnstileSecretKey: '',
 		hello: '',
+		number: '',
 		commentsPassword: '',
 		formsPassword: '',
 		memesPassword: '',

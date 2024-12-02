@@ -42,7 +42,8 @@ export default defineEventHandler(async (event) => {
 		content: {
 			name: validatedData.name,
 			description: validatedData.description,
-			pathname: blob.pathname
+			pathname: blob.pathname,
+			ip: getRequestIP(event, { xForwardedFor: true })
 		},
 		type: 'meme'
 	}]).returning()
