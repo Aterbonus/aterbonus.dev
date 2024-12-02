@@ -1,4 +1,4 @@
-import { useDrizzle } from '~~/server/utils/drizzle'
+import { useDrizzle } from '#build/types/nitro-imports'
 import { createValidateCreateForm } from '~~/server/utils/schemas/toys/forms'
 
 export default defineEventHandler(async (event) => {

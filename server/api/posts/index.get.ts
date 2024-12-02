@@ -1,5 +1,3 @@
-import { useDrizzle } from '~~/server/utils/drizzle'
-
 export default eventHandler(async (event) => {
 	const drizzle = useDrizzle()
 	const { limit, offset } = await usePagination(event)
