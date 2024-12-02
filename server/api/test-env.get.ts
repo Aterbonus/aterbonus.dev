@@ -6,8 +6,8 @@ export default eventHandler((event) => {
 		'runtimeConfig(event).hello': runtimeConfig.hello,
 		'import.meta.env.NUXT_HELLO': import.meta.env.NUXT_HELLO,
 		'process.env.NUXT_HELLO': process.env.NUXT_HELLO,
-		'runtimeConfig().NUMBER': useRuntimeConfig().number,
-		'runtimeConfig(event).NUMBER': runtimeConfig.number,
+		'runtimeConfig().number': useRuntimeConfig().number,
+		'runtimeConfig(event).number': runtimeConfig.number,
 		'import.meta.env.NUXT_NUMBER': import.meta.env.NUXT_NUMBER,
 		'process.env.NUXT_NUMBER': process.env.NUXT_NUMBER
 	}
