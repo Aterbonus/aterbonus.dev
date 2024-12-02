@@ -1,5 +1,5 @@
 import type { Form } from '~~/server/utils/schemas/toys/forms'
-import { useDrizzle } from '#build/types/nitro-imports'
+import { useDrizzle } from '~~/server/utils/drizzle'
 import * as v from 'valibot'
 
 export default defineEventHandler(async (event) => {

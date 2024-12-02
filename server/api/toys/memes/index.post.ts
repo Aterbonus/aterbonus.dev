@@ -1,4 +1,4 @@
-import { useDrizzle } from '#build/types/nitro-imports'
+import { useDrizzle } from '~~/server/utils/drizzle'
 import { createValidateCreateMeme } from '~~/server/utils/schemas/toys/memes'
 
 export default defineEventHandler(async (event) => {
