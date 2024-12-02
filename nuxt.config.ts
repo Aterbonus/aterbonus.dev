@@ -2,6 +2,9 @@ export default defineNuxtConfig({
 	future: {
 		compatibilityVersion: 4
 	},
+	devtools: {
+		enabled: true
+	},
 	modules: [
 		'@unocss/nuxt',
 		'@vueuse/nuxt',
@@ -14,7 +17,8 @@ export default defineNuxtConfig({
 		'@pinia/nuxt'
 	],
 	hub: {
-		database: true
+		database: true,
+		blob: true
 	},
 	nitro: {
 		experimental: {
@@ -28,7 +32,8 @@ export default defineNuxtConfig({
 		defaultLocale: 'es'
 	},
 	routeRules: {
-		'/admin/**': { robots: false }
+		'/admin/**': { robots: false },
+		'/api/toys/memes/**': { cors: true }
 	},
 	ogImage: {
 		enabled: false
@@ -65,7 +70,9 @@ export default defineNuxtConfig({
 		turnstileSecretKey: '',
 		hello: '',
 		commentsPassword: '',
-		formsPassword: ''
+		formsPassword: '',
+		memesPassword: '',
+		memesUploadPassword: ''
 	},
 	compatibilityDate: '2024-07-26'
 })
