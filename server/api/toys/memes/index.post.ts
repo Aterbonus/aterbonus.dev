@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
 		throw createError({
 			statusCode: 400,
 			data: ex,
-			message: 'Error de validación'
+			message: `Error de validación: ${ex?.message ?? 'Something'}`
 		})
 	}
 
