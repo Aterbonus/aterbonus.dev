@@ -1,21 +1,6 @@
 import type { Form } from '~~/server/utils/schemas/toys/forms'
-import { createHash } from 'node:crypto'
-import * as v from 'valibot'
 
 export default defineEventHandler(async (event) => {
-	const config = useRuntimeConfig(event)
-
-	try {
-		await getValidatedQuery(event, v.parser(v.object({
-			password: v.pipe(v.string(), v.check(input => input === config.formsPassword))
-		})))
-	}
-	catch {
-		throw createError({
-			status: 401,
-			message: 'Contraseña errronea'
-		})
-	}
 	const { limit, offset } = await usePagination(event)
 
 	const drizzle = useDrizzle()

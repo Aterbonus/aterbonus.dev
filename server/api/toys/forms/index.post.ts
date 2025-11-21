@@ -1,9 +1,7 @@
-import { createValidateCreateForm } from '~~/server/utils/schemas/toys/forms'
+import { validateForm } from '~~/server/utils/schemas/toys/forms'
 
 export default defineEventHandler(async (event) => {
-	const config = useRuntimeConfig(event)
-
-	const data = await readValidatedBody(event, createValidateCreateForm(config.formsPassword))
+	const data = await readValidatedBody(event, validateForm)
 
 	const drizzle = useDrizzle()
 

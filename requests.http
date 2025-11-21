@@ -17,8 +17,7 @@ Content-Type: application/json
 
 {
 	"name": "Gustavo Marín",
-	"email": "other@example.com",
-	"subject": "Este es un asunto",
-	"content": "Este es un contenido",
-	"password": "abc123forms"
+	"email": "a@a.cl",
+	"subject": "Este es un asunto muy largooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo",
+	"content": "Este es otro contenido"
 }

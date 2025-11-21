@@ -1,15 +1,12 @@
 import * as v from 'valibot'
 
-export function createValidateCreateForm(password: string) {
-	return v.parser(v.object({
-		name: v.pipe(v.string(), v.trim(), v.nonEmpty(), v.maxLength(200)),
-		email: v.pipe(v.string(), v.trim(), v.email(), v.maxLength(200)),
-		subject: v.pipe(v.string(), v.trim(), v.nonEmpty(), v.maxLength(200)),
-		content: v.pipe(v.string(), v.trim(), v.nonEmpty(), v.maxLength(1000)),
-		password: v.pipe(v.string(), v.check(input => input === password))
-	}))
-}
-export type CreateCommentForm = ReturnType<ReturnType<typeof createValidateCreateForm>>
+export const validateForm = v.parser(v.object({
+	name: v.pipe(v.string('name debe ser string'), v.trim(), v.nonEmpty('name no debe ser vacío'), v.maxLength(200, 'name debe tener como máximo 200 caracteres')),
+	email: v.pipe(v.string('email debe ser string'), v.trim(), v.email('email debe ser un e-mail'), v.maxLength(200, 'email debe tener como máximo 200 caracteres')),
+	subject: v.pipe(v.string('subject debe ser string'), v.trim(), v.nonEmpty('subject no debe ser vacío'), v.maxLength(200, 'subject debe tener como máximo 200 caracteres')),
+	content: v.pipe(v.string('content debe ser string'), v.trim(), v.nonEmpty('content no debe ser vacío'), v.maxLength(1000, 'subject debe tener como máximo 1000 caracteres'))
+}))
+export type CreateCommentForm = ReturnType<typeof validateForm>
 export interface Form {
 	name: string
 	email: string
