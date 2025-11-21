@@ -9,8 +9,9 @@ const { data: forms, execute, status } = useFetch('/api/toys/forms')
 
 function formatTime(date: string) {
 	return new Intl.DateTimeFormat('default', {
-		hour: 'numeric',
-		minute: 'numeric'
+		dateStyle: 'full',
+		timeStyle: 'short',
+		hour12: false
 	}).format(new Date(date))
 }
 </script>
