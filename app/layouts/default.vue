@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<Header class="sticky top-0" />
-		<main class="container">
+		<AppHeader class="top-0 sticky" />
+		<main class="container-inset">
 			<slot />
 		</main>
 	</div>
