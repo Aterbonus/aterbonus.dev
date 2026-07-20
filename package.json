@@ -12,7 +12,8 @@
 		"lint:fix": "eslint . --fix"
 	},
 	"dependencies": {
-		"@takumi-rs/core": "2.0.0-rc.16"
+		"@takumi-rs/core": "2.0.0-rc.16",
+		"nuxt": "^4.5.0"
 	},
 	"devDependencies": {
 		"@antfu/eslint-config": "^9.1.0",
@@ -29,7 +30,6 @@
 		"drizzle-kit": "^0.31.10",
 		"drizzle-orm": "^0.45.2",
 		"eslint": "^10.7.0",
-		"nuxt": "npm:nuxt-nightly@5x",
 		"pinia": "^4.0.2",
 		"rollup": "^4.62.2",
 		"typescript": "^6.0.3",

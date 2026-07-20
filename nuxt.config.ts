@@ -12,6 +12,5 @@ export default defineNuxtConfig({
 	],
 	nitro: {
 		preset: 'cloudflare-module',
-		builder: 'rollup', // en vez de rolldown/vite por defecto
 	},
 })
