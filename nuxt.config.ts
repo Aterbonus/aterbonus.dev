@@ -3,9 +3,6 @@ export default defineNuxtConfig({
 	future: {
 		compatibilityVersion: 5,
 	},
-	features: {
-		inlineStyles: false,
-	},
 	devtools: {
 		enabled: true,
 	},
@@ -14,12 +11,6 @@ export default defineNuxtConfig({
 		'@vueuse/nuxt',
 		'@pinia/nuxt',
 	],
-	site: {
-		url: 'https://aterbonus.dev',
-		name: 'Aterbonus\' Home',
-		description: 'Gustavo Alfredo Marín Sáez, un desarrollador más.',
-		defaultLocale: 'es',
-	},
 	css: [
 		'~/assets/css/main.css',
 	],
