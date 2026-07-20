@@ -6,12 +6,10 @@
 		"build": "nuxt build",
 		"dev": "nuxt dev",
 		"generate": "nuxt generate",
-		"preview": "wrangler pages dev dist",
+		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare",
 		"lint": "eslint .",
-		"lint:fix": "eslint . --fix",
-		"shadcn-create": "pnpx shadcn-vue@latest add",
-		"db:generate": "drizzle-kit generate"
+		"lint:fix": "eslint . --fix"
 	},
 	"dependencies": {
 		"@takumi-rs/core": "2.0.0-rc.16"
