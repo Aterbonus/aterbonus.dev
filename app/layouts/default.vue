@@ -1,8 +1,10 @@
 <template>
 	<div>
-		<AppHeader class="top-0 sticky" />
-		<main class="container-inset">
-			<slot />
-		</main>
+		<AppHeader />
+		<UMain>
+			<UContainer>
+				<slot />
+			</UContainer>
+		</UMain>
 	</div>
 </template>

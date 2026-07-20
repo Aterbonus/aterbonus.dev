@@ -4,7 +4,7 @@ export default defineNuxtConfig({
 		enabled: true,
 	},
 	modules: [
-		'@unocss/nuxt',
+		'@nuxt/ui',
 		'@vueuse/nuxt',
 	],
 	css: [

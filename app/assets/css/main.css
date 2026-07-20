@@ -1,1 +1,18 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
 
+@layer base {
+	button:not(:disabled),
+	[role='button']:not(:disabled) {
+		cursor: pointer;
+	}
+}
+
+@theme {
+	--font-sans: 'Lato', system-ui, sans-serif;
+	--font-mono: 'JetBrains Mono', monospace;
+}
+
+:root {
+	--ui-text-highlighted: var(--ui-color-primary-500);
+}

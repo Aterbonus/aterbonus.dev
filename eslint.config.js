@@ -5,6 +5,8 @@ export default antfu(
 		stylistic: {
 			indent: 'tab',
 		},
-		unocss: true,
+		formatters: {
+			css: true,
+		},
 	},
 )
