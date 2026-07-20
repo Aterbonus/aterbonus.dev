@@ -12,7 +12,6 @@ export default defineNuxtConfig({
 	modules: [
 		'@unocss/nuxt',
 		'@vueuse/nuxt',
-		'@nuxtjs/seo',
 		'@pinia/nuxt',
 	],
 	site: {
