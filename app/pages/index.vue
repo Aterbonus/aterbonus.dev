@@ -1,8 +1,4 @@
 <script lang="ts" setup>
-definePageMeta({
-	auth: false,
-})
-
 const subtitles = [
 	'Cargando...',
 	'Un desarrollador más',

@@ -21,17 +21,6 @@ export default defineNuxtConfig({
 		description: 'Gustavo Alfredo Marín Sáez, un desarrollador más.',
 		defaultLocale: 'es',
 	},
-	ogImage: {
-		enabled: false,
-	},
-	schemaOrg: {
-		identity: {
-			type: 'Person',
-			name: 'Gustavo Alfredo Marín Sáez',
-			url: 'https://aterbonus.dev',
-			sameAs: ['https://github.com/aterbonus', 'https://www.linkedin.com/in/gustavo-marin-saez/'],
-		},
-	},
 	css: [
 		'~/assets/css/main.css',
 	],
