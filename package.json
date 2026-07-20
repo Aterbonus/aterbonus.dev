@@ -31,7 +31,7 @@
 		"drizzle-kit": "^0.31.10",
 		"drizzle-orm": "^0.45.2",
 		"eslint": "^10.7.0",
-		"nuxt": "4.5.0",
+		"nuxt": "npm:nuxt-nightly@5x",
 		"pinia": "^4.0.2",
 		"typescript": "^6.0.3",
 		"unocss": "^66.7.5",
