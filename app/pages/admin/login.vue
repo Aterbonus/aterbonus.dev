@@ -29,6 +29,7 @@ const toast = useToast()
 const router = useRouter()
 const authStore = useAuthStore()
 const token = ref('')
+const turnstileRef = ref()
 
 async function onSubmit(payload: FormSubmitEvent<LoginSchemaOutput>) {
 	const { email, password, remember } = payload.data
@@ -49,6 +50,7 @@ async function onSubmit(payload: FormSubmitEvent<LoginSchemaOutput>) {
 				title: 'Error',
 			})
 		}
+		turnstileRef.value.reset()
 	}
 }
 </script>
@@ -58,7 +60,7 @@ async function onSubmit(payload: FormSubmitEvent<LoginSchemaOutput>) {
 		<UPageCard class="max-w-sm w-full">
 			<UAuthForm title="Login" :fields="fields" :schema="LoginSchema" @submit="onSubmit">
 				<template #submit="{ loading }">
-					<NuxtTurnstile v-model="token" />
+					<NuxtTurnstile ref="turnstileRef" v-model="token" />
 					<UButton type="submit" :loading class="w-full justify-center">
 						Continuar
 					</UButton>
