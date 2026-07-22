@@ -1,0 +1,9 @@
+POST http://localhost:3000/api/setup/first-user
+Content-Type: application/json
+X-BOOTSTRAP-SECRET: SECRET_ABC!1
+
+{
+	"name": "name",
+	"email": "email",
+	"password": "password"
+}

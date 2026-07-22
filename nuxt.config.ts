@@ -30,5 +30,6 @@ export default defineNuxtConfig({
 			secret: '',
 			baseUrl: '',
 		},
+		bootstrapSecret: '',
 	},
 })
