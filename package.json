@@ -11,7 +11,8 @@
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix",
 		"db:generate": "drizzle-kit generate",
-		"db:migrate": "wrangler d1 migrations apply DB"
+		"db:migrate": "wrangler d1 migrations apply DB",
+		"db:upload": "wrangler d1 export DB --local --output=./d1-local-export.sql && wrangler d1 execute DB --remote --file=./d1-local-export.sql"
 	},
 	"dependencies": {
 		"@better-auth/drizzle-adapter": "^1.6.23",

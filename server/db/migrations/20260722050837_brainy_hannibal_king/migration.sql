@@ -24,6 +24,7 @@ CREATE TABLE `session` (
 	`user_agent` text,
 	`created_at` integer NOT NULL,
 	`updated_at` integer NOT NULL,
+	`impersonated_by` text,
 	CONSTRAINT `fk_session_user_id_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user`(`id`) ON DELETE CASCADE
 );
 --> statement-breakpoint
@@ -34,7 +35,11 @@ CREATE TABLE `user` (
 	`email_verified` integer NOT NULL,
 	`image` text,
 	`created_at` integer NOT NULL,
-	`updated_at` integer NOT NULL
+	`updated_at` integer NOT NULL,
+	`role` text,
+	`banned` integer,
+	`ban_reason` text,
+	`ban_expires` integer
 );
 --> statement-breakpoint
 CREATE TABLE `verification` (

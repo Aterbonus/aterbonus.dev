@@ -10,3 +10,4 @@ dist
 
 .data
 .wrangler
+d1-local-export.sql

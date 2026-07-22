@@ -1,7 +1,7 @@
 {
   "version": "7",
   "dialect": "sqlite",
-  "id": "63ee541d-bad9-44e3-b227-b3e48c5feb79",
+  "id": "290992ec-3ace-4377-9264-e6f3bce740b0",
   "prevIds": [
     "00000000-0000-0000-0000-000000000000"
   ],
@@ -238,6 +238,16 @@
       "autoincrement": false,
       "default": null,
       "generated": null,
+      "name": "impersonated_by",
+      "entityType": "columns",
+      "table": "session"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
       "name": "id",
       "entityType": "columns",
       "table": "user"
@@ -299,6 +309,46 @@
       "default": null,
       "generated": null,
       "name": "updated_at",
+      "entityType": "columns",
+      "table": "user"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "role",
+      "entityType": "columns",
+      "table": "user"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "banned",
+      "entityType": "columns",
+      "table": "user"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "ban_reason",
+      "entityType": "columns",
+      "table": "user"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "ban_expires",
       "entityType": "columns",
       "table": "user"
     },
