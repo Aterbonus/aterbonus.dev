@@ -1,9 +1,6 @@
 export default defineNuxtConfig({
 	compatibilityDate: '2026-07-19',
-	future: {
-		compatibilityVersion: 5,
-	},
-	experimental: { nitroAutoImports: true, asyncContext: true },
+	experimental: { asyncContext: true },
 	devtools: {
 		enabled: true,
 	},
