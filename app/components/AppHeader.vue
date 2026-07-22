@@ -15,7 +15,7 @@ async function logout() {
 			<UButton v-if="authStore.isLoggedIn" @click="logout">
 				Logout
 			</UButton>
-			<UButton v-else to="/login">
+			<UButton v-else to="/admin/login">
 				Login
 			</UButton>
 		</template>
