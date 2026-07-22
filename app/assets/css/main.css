@@ -12,7 +12,3 @@
 	--font-sans: 'Lato', system-ui, sans-serif;
 	--font-mono: 'JetBrains Mono', monospace;
 }
-
-:root {
-	--ui-text-highlighted: var(--ui-color-primary-500);
-}

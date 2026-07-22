@@ -3,13 +3,15 @@ export default defineNuxtConfig({
 	future: {
 		compatibilityVersion: 5,
 	},
-	experimental: { nitroAutoImports: true },
+	experimental: { nitroAutoImports: true, asyncContext: true },
 	devtools: {
 		enabled: true,
 	},
 	modules: [
 		'@nuxt/ui',
 		'@vueuse/nuxt',
+		'@pinia/nuxt',
+		'@pinia/colada-nuxt',
 	],
 	css: [
 		'~/assets/css/main.css',

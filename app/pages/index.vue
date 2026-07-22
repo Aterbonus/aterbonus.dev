@@ -18,6 +18,7 @@ onMounted(() => {
 		title="Gustavo Alfredo Marín Sáez"
 		orientation="horizontal"
 		:description="subtitle"
+		class="[--ui-text-highlighted:var(--color-primary-500)]"
 	>
 		<div class="text-center">
 			<UIcon name="i-fxemoji-construction" class="size-32 mb-4" />
