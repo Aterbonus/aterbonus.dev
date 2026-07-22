@@ -28,12 +28,13 @@ const fields = ref<AuthFormField[]>([
 const toast = useToast()
 const router = useRouter()
 const authStore = useAuthStore()
+const token = ref('')
 
 async function onSubmit(payload: FormSubmitEvent<LoginSchemaOutput>) {
 	const { email, password, remember } = payload.data
 
 	try {
-		await authStore.signIn(email, password, remember)
+		await authStore.signIn(email, password, token.value, remember)
 		router.push('/admin/private')
 	}
 	catch (ex) {
@@ -55,7 +56,14 @@ async function onSubmit(payload: FormSubmitEvent<LoginSchemaOutput>) {
 <template>
 	<div class="flex items-center justify-center px-4 py-16">
 		<UPageCard class="max-w-sm w-full">
-			<UAuthForm title="Login" :fields="fields" :schema="LoginSchema" @submit="onSubmit" />
+			<UAuthForm title="Login" :fields="fields" :schema="LoginSchema" @submit="onSubmit">
+				<template #submit="{ loading }">
+					<NuxtTurnstile v-model="token" />
+					<UButton type="submit" :loading class="w-full justify-center">
+						Continuar
+					</UButton>
+				</template>
+			</UAuthForm>
 		</UPageCard>
 	</div>
 </template>

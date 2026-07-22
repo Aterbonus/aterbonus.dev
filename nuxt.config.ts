@@ -9,11 +9,26 @@ export default defineNuxtConfig({
 		'@vueuse/nuxt',
 		'@pinia/nuxt',
 		'@pinia/colada-nuxt',
+		'@nuxtjs/turnstile',
 	],
 	css: [
 		'~/assets/css/main.css',
 	],
 	nitro: {
 		preset: 'cloudflare-module',
+	},
+	runtimeConfig: {
+		public: {
+			turnstile: {
+				siteKey: '',
+			},
+		},
+		turnstile: {
+			secretKey: '',
+		},
+		betterAuth: {
+			secret: '',
+			baseUrl: '',
+		},
 	},
 })

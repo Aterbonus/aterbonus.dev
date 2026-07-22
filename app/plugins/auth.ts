@@ -1,4 +1,7 @@
-export default defineNuxtPlugin(async () => {
-	const authStore = useAuthStore(usePinia())
-	await authStore.refresh()
+export default defineNuxtPlugin({
+	setup: async () => {
+		const authStore = useAuthStore(usePinia())
+		await authStore.refresh()
+	},
+	parallel: true,
 })

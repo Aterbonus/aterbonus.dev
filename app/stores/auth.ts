@@ -7,6 +7,7 @@ type AuthSessionResult = AuthSession | null
 interface SignInPayload {
 	email: string
 	password: string
+	token: string
 	rememberMe?: boolean
 }
 
@@ -26,6 +27,9 @@ export const useAuthStore = defineStore('auth', () => {
 		mutation: async (payload: SignInPayload) => {
 			return new Promise<unknown>((resolve, reject) => {
 				authClient.signIn.email(payload, {
+					headers: {
+						'x-captcha-response': payload.token,
+					},
 					onSuccess(ctx) {
 						resolve(ctx)
 					},
@@ -68,8 +72,8 @@ export const useAuthStore = defineStore('auth', () => {
 		})
 	}
 
-	function signIn(email: string, password: string, rememberMe = false) {
-		return signInMutation.mutateAsync({ email, password, rememberMe })
+	function signIn(email: string, password: string, token: string, rememberMe = false) {
+		return signInMutation.mutateAsync({ email, password, rememberMe, token })
 	}
 
 	function signOut() {
@@ -77,7 +81,6 @@ export const useAuthStore = defineStore('auth', () => {
 	}
 
 	return {
-		data,
 		user,
 		session,
 		isLoggedIn,
